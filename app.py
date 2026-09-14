@@ -636,7 +636,7 @@ def render_contact_footer() -> None:
         st.download_button("Download Resume (PDF)", data=resume_file.read_bytes(), file_name=resume_file.name, mime="application/pdf", use_container_width=True)
     else:
         st.download_button("Download Resume (PDF)", data=b"", file_name="resume.pdf", mime="application/pdf", disabled=True, use_container_width=True, help="Add your PDF at the resume_path set in PORTFOLIO_DATA.")
-    st.markdown(f'<footer class="site-footer">© 2026 {escape(PORTFOLIO_DATA["identity"].get("name", "YOUR NAME"))}. Built with Streamlit.</footer>', unsafe_allow_html=True)
+    st.markdown(f'<footer class="site-footer">© 2026 {escape(PORTFOLIO_DATA["identity"].get("name", "YOUR NAME"))}. </footer>', unsafe_allow_html=True)
 
 
 def _portfolio_text_chunks() -> list[str]:
@@ -737,7 +737,7 @@ Retrieved context:
 
 
 st.set_page_config(
-    page_title="Your Name | Portfolio",
+    page_title="Kashif | Portfolio",
     page_icon="✦",
     layout="wide",
     initial_sidebar_state="collapsed",
