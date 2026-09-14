@@ -355,9 +355,11 @@ def render_hero_section() -> None:
                 <canvas id="webgl-canvas"></canvas>
                 <div class="hero-content">
                     <p class="eyebrow">Portfolio</p>
-                    <h1>YOUR FULL NAME</h1>
+                    <h1>Muhammad Kashif Ansari</h1>
                     <p class="title">AI Engineer | Computer Vision Specialist | Data Scientist</p>
-                    <p class="tagline">Building intelligent, human-centered systems that turn complex data and visual signals into useful real-world products.</p>
+                    <p class="tagline">I am a Data Scientist, AI/ML Engineer, and Computer Vision Engineer passionate about turning data and intelligent technologies into practical, impactful solutions. My experience combines machine learning, deep learning, computer vision, data analysis, and software development. I have worked on projects including a deep-learning-based polyp detection system using CNNs, TensorFlow, OpenCV, and fuzzy logic, as well as data-driven applications such as Stockifistic. My academic and professional journey, along with my experience as a Computer Science Lab Instructor, has strengthened both my technical expertise and problem-solving abilities.
+                                </p><p>I am continuously learning and exploring modern AI technologies, including RAG, LLMs, AI engineering, model optimization, and deployment. Moving forward, my goal is to grow as an AI/ML professional by solving challenging real-world problems, contributing to meaningful research, and building intelligent systems that create measurable impact. I am driven by curiosity, continuous learning, and a passion for transforming innovative ideas into reliable, real-world AI solutions.
+                            </p>
                     <button class="cta" type="button" onclick="goToProjects()">Explore Work <span aria-hidden="true">↓</span></button>
                 </div>
             </section>
