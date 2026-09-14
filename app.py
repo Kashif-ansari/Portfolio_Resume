@@ -17,36 +17,68 @@ from pathlib import Path
 # =============================================================================
 PORTFOLIO_DATA = {
     "identity": {
-        "name": "YOUR NAME",  # e.g. "Jane Doe"
+        "name": "Muhammad Kashif Ansari",  # e.g. "Jane Doe"
         "title": "AI Engineer | Computer Vision | ML Engineer",  # Edit headline
         "summary": (
-            "Write a concise, professional introduction describing your focus, "
-            "strengths, and the value you bring."
+            "I am a Data Scientist, AI/ML Engineer, and Computer Vision Engineer passionate about turning data and intelligent technologies into practical, impactful solutions. My experience combines machine learning, deep learning, computer vision, data analysis, and software development. I have worked on projects including a deep-learning-based polyp detection system using CNNs, TensorFlow, OpenCV, and fuzzy logic, as well as data-driven applications such as Stockifistic. My academic and professional journey, along with my experience as a Computer Science Lab Instructor, has strengthened both my technical expertise and problem-solving abilities."
+            "I am continuously learning and exploring modern AI technologies, including RAG, LLMs, AI engineering, model optimization, and deployment. Moving forward, my goal is to grow as an AI/ML professional by solving challenging real-world problems, contributing to meaningful research, and building intelligent systems that create measurable impact. I am driven by curiosity, continuous learning, and a passion for transforming innovative ideas into reliable, real-world AI solutions."
         ),  # Edit professional summary
-        "location": "City, Country",  # Optional
+        "location": "Karachi, Pakistan",  # Optional
         "profile_image": "assets/profile.jpg",  # Local path or hosted image URL
-        "bio": "Write your background story, values, and professional direction here.",
-        "currently_learning": ["Generative AI", "MLOps", "3D Computer Vision"],  # Edit topics
+        "bio": "My professional journey has grown from a foundation in software development and computer science into a focused career in Data Science, Artificial Intelligence, Machine Learning, and Computer Vision. Through academic study, professional software development, university teaching, and hands-on research, I have gained experience building practical solutions while continuously strengthening my understanding of emerging technologies. From developing software applications to researching deep-learning-based computer vision systems, I enjoy turning complex problems into meaningful and usable solutions. My core values are continuous learning, innovation, problem-solving, integrity, and practical impact. I believe technology is most valuable when it solves real problems and creates measurable value. Moving forward, I aim to build a career as an AI/ML Engineer and Data Scientist, specializing in intelligent systems, computer vision, and AI engineering. I am committed to continuously expanding my technical expertise, contributing to impactful research and projects, and transforming emerging AI technologies into reliable solutions for real-world challenges.",
+        "currently_learning": ["Custom and Distributed Training with TensorFlow", "Generative Deep Learning with TensorFlow", "Custom Models, Layers, and Loss Functions with TensorFlow"],  # Edit topics
         "development_process": ["Discover", "Design", "Build", "Iterate"],  # Edit process
     },
     "experience": [
         {
-            "company": "Company Name",  # Edit company
-            "role": "Job Title",  # Edit role
-            "date_range": "MMM YYYY – Present",  # Edit dates
-            "location": "City, Country",  # Optional
+            "company": "Mohammad Ali Jinnah University",  # Edit company
+            "role": "Lab Instructor",  # Edit role
+            "date_range": "09 2025 – Present",  # Edit dates
+            "location": "Karachi, Pakistan",  # Optional
             "achievements": [
-                "Add a measurable achievement or responsibility.",
-                "Add another key contribution.",
+                "Successfully delivered Data Communication & Networks and Operating Systems laboratory sessions, providing hands-on learning in networking, Linux, C, Bash, and system concepts.",
+    "Served as FYP Coordinator and Teaching Assistant, supporting student assessments, coordinating FYP activities, and guiding student groups throughout their projects."
+
             ],
+        },
+        {
+            "company": "Koder Labs",  # Edit company
+            "role": "Dot Net Developer",  # Edit role
+            "date_range": "10 2024 – 08 2025",  # Edit dates
+            "location": "Karachi, Pakistan",  # Optional
+            "achievements": [
+                "Developed and maintained web applications using C#, ASP.NET, SQL, HTML, and CSS, contributing to reliable and scalable software solutions.",
+    "Worked across database development, application deployment, and hosting, strengthening full-stack development and production support skills."
+],
+        },
+        {
+                    "company": "Atique Trading Co",  # Edit company
+                    "role": "IT Administration",  # Edit role
+                    "date_range": "01 2023 – 12 2023",  # Edit dates
+                    "location": "Karachi, Pakistan",  # Optional
+                    "achievements": [
+                        "Managed and maintained IT infrastructure, computer systems, networks, and software to ensure smooth and reliable day-to-day operations.",
+"Provided technical support, troubleshooting, system maintenance, and user assistance while helping improve overall IT efficiency and security."],
         },
     ],
     "education": [
         {
+            "degree": "M.S. in Data Science",  # Edit degree
+            "institution": "Mohammad Ali Jinnah University",  # Edit institution
+            "graduation_year": "2027",  # Edit year
+            "coursework": ["Machine Learning", "Computer Vision","Data Science"],  # Edit courses
+        },
+        {
             "degree": "B.S. in Computer Science",  # Edit degree
-            "institution": "University Name",  # Edit institution
-            "graduation_year": "YYYY",  # Edit year
+            "institution": "Karachi institute of economics and Technology",  # Edit institution
+            "graduation_year": "2024",  # Edit year
             "coursework": ["Machine Learning", "Data Structures"],  # Edit courses
+        },
+        {
+            "degree": "Pre-Engineering",  # Edit degree
+            "institution": "Sindh Muslim Science college",  # Edit institution
+            "graduation_year": "2020",  # Edit year
+            "coursework": ["Mathematics", "Statistics"],  # Edit courses
         },
     ],
     "projects": [
@@ -68,27 +100,30 @@ PORTFOLIO_DATA = {
     ],
     "certificates": [
         # Add exactly 9 certificate entries when ready.
-        {"title": "Certificate 1", "image": "assets/certificates/cert-01.jpg"},
-        {"title": "Certificate 2", "image": "assets/certificates/cert-02.jpg"},
-        {"title": "Certificate 3", "image": "assets/certificates/cert-03.jpg"},
-        {"title": "Certificate 4", "image": "assets/certificates/cert-04.jpg"},
-        {"title": "Certificate 5", "image": "assets/certificates/cert-05.jpg"},
-        {"title": "Certificate 6", "image": "assets/certificates/cert-06.jpg"},
-        {"title": "Certificate 7", "image": "assets/certificates/cert-07.jpg"},
-        {"title": "Certificate 8", "image": "assets/certificates/cert-08.jpg"},
-        {"title": "Certificate 9", "image": "assets/certificates/cert-09.jpg"},
+        {"title": "Python for Data Science ", "image": "assets/certificates/cert-01.jpg"},
+        {"title": "Data Analysis with Python", "image": "assets/certificates/cert-02.jpg"},
+        {"title": "Data Visualisation with Python", "image": "assets/certificates/cert-03.jpg"},
+        {"title": "Machine Learning with Python", "image": "assets/certificates/cert-04.jpg"},
+        {"title": "Pytorch: Tensor, Data Set and Augmentation", "image": "assets/certificates/cert-05.jpg"},
+        {"title": "Deep Learning Fundamentals ", "image": "assets/certificates/cert-06.jpg"},
+        {"title": "Deep Learning with TensorFlow", "image": "assets/certificates/cert-07.jpg"},
+        {"title": "Accelerative Deep Learning with GPU’s", "image": "assets/certificates/cert-08.jpg"},
+        {"title": "Deep Learning with PyTorch: Image Segmentation", "image": "assets/certificates/cert-09.jpg"},
+        {"title": "Docker Essentials: A Developer Introduction", "image": "assets/certificates/cert-09.jpg"},
+        {"title": "Introduction to Containers, Kubernetes, and OpenShift", "image": "assets/certificates/cert-09.jpg"},
+        
     ],
     "skills": {
-        "languages": ["Python"],  # Edit languages
-        "machine_learning": ["PyTorch", "TensorFlow", "scikit-learn"],
+        "languages": ["Python","C#",],  # Edit languages
+        "machine_learning": ["PyTorch", "TensorFlow", "scikit-learn","Matplotlib"],
         "tools_and_frameworks": ["Streamlit", "FAISS", "OpenCV", "Git"],
-        "databases_and_cloud": ["Add databases, cloud, or deployment tools"],
+        "databases": ["SQL", "Firebase"],
     },
     "contact": {
-        "email": "your.email@example.com",  # Edit email
-        "linkedin": "https://www.linkedin.com/in/your-profile",  # Edit LinkedIn URL
-        "github": "https://github.com/your-username",  # Edit GitHub URL
-        "whatsapp": "https://wa.me/your-number",  # Use country code, no + or spaces
+        "email": "mkashifansari579@gmail.com",  # Edit email
+        "linkedin": "https://www.linkedin.com/in/muhammad-kashif-ansari-842b22159/",  # Edit LinkedIn URL
+        "github": "https://github.com/Kashif-ansari",  # Edit GitHub URL
+        "whatsapp": "https://wa.me/923308342284",  # Use country code, no + or spaces
         "discord": "your_discord_username",  # Edit Discord handle/invite URL
         "commission_status": "Available",  # e.g. Available, Limited, Unavailable
         "resume_path": "assets/resume.pdf",  # Local PDF path for the download button

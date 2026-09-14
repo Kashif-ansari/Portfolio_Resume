@@ -61,3 +61,149 @@ Layout:
 Design: Dark theme works best for 3D work. Allow renders to load in high quality. Consider WebGL interactive elements for homepage.
 
 tell me how can I train my chatbot with info needed complete step by step guide and make sure that my chat bot reply politely when given question or prompt is not related to my portfolio resume
+
+____________________________________________
+
+PART 1: Step-by-Step Guide to Build & Train Your RAG Chatbot
+To make your chatbot respond strictly based on your resume and politely redirect off-topic questions, you will use a Retrieval-Augmented Generation (RAG) pipeline.
+
+Step 1: Install Required Libraries
+Bash
+pip install streamlit langchain langchain-community langchain-groq faiss-cpu sentence-transformers python-dotenv
+Step 2: Structure Your Portfolio Knowledge Base (data.txt or data.json)
+Create a clear text file (e.g., resume_data.txt) containing all details about your education, projects, skills, and work history.
+
+Step 3: Embed & Index Your Data with FAISS
+In your Python application setup:
+
+Load Data: Read resume_data.txt.
+
+Chunk Text: Use RecursiveCharacterTextSplitter to break text into manageable chunks (~300–500 characters).
+
+Generate Embeddings: Convert text chunks into vectors using a lightweight embedding model (e.g., all-MiniLM-L6-v2 via HuggingFace or SentenceTransformers).
+
+Build Vector Store: Store vectors locally in FAISS (FAISS.from_documents(...)).
+
+Step 4: Configure Groq API & System Prompt
+Pass the retrieved context from FAISS into the Groq LLaMA-3 model using a constrained System Prompt designed to enforce guardrails:
+
+System Guardrail Rule:
+"You are an AI Assistant representing [YOUR NAME]'s professional portfolio. Answer questions using ONLY the provided context below. If the user asks a question unrelated to [YOUR NAME]'s skills, experience, projects, education, or contact details, respond politely with: 'I am designed to answer questions specifically about [YOUR NAME]'s professional background, projects, and expertise. Feel free to ask about their experience, skills, or portfolio projects!'"
+
+PART 2: Modular Prompt Sequence for Building the Application
+Using a modular prompt sequence prevents AI context overload and hallucination. Run these prompts sequentially with your code generator or LLM coding assistant.
+
+__________________________________
+
+Act as a Principal Full-Stack Streamlit & Python Developer.
+Help me set up the foundation for a dark-themed interactive Portfolio Web Application using Python Streamlit, custom HTML/CSS, FAISS, and the Groq API.
+
+Task:
+1. Create a main file `app.py` and a modular configuration layout.
+2. Inject custom CSS at the top of Streamlit to enforce a sleek, modern dark-mode design (dark slate background #0E1117, vibrant neon blue/purple accents, smooth font typography, custom card styling).
+3. Create a dedicated section at the very top of `app.py` containing a structured Python Dictionary or multi-line comment block named `PORTFOLIO_DATA`.
+
+Inside `PORTFOLIO_DATA`, provide placeholder variables with clear edit comments where I will paste my actual content:
+- SUMMARY & TITLE: (e.g., AI Engineer / Computer Vision / ML Engineer)
+- EXPERIENCE: (Company name, role, date ranges, key achievements)
+- EDUCATION: (Degrees, institution, graduation year, coursework)
+- PROJECTS: (Title, category, year, tools/frameworks used, overview, process/WIP notes, live demo links)
+- CERTIFICATES: (Array of 9 image paths or URLs with titles)
+- SKILLS & TOOLS: (Python, PyTorch, TensorFlow, Streamlit, FAISS, Open-CV, etc.)
+- CONTACT & SOCIALS: (Email, LinkedIn, GitHub, WhatsApp, Discord, Commission Status: Available)
+
+Ensure `PORTFOLIO_DATA` is easy to update and clean. Return only the boilerplate architecture and CSS styling script.
+
+__________________________________________
+
+Act as a Frontend Developer specializing in PyScript, HTML/CSS, Three.js, and Streamlit.
+
+Task:
+Build the Hero Section of my portfolio inside Streamlit using `st.components.v1.html`.
+
+Requirements:
+1. Canvas Design: Full-bleed canvas element featuring a dark 3D interactive particle network or WebGL/Three.js rotating geometric wireframe loop.
+2. Overlay Content: Centered HTML overlay containing:
+   - Full Name in bold typography.
+   - Professional Title: AI Engineer | Computer Vision Specialist | Data Scientist.
+   - Short tagline summarizing expertise.
+   - Smooth CTA button: "Explore Work" (scrolls or navigates to the Work/Projects section).
+3. Theme: Dark theme (#0E1117), responsive layout, zero overflow scrollbars on the canvas.
+
+Integrate this cleanly as a function `render_hero_section()` in Streamlit.
+
+____________________________________________________
+
+Act as a UI/UX Developer and Streamlit Expert.
+
+Task:
+Build the Work Categories, Interactive Project Grid, and Project View Template using Streamlit state management and custom HTML cards.
+
+Requirements:
+1. Category Filtering: Tabs or buttons for filtering projects:
+   - "All Work", "Environment Art / CV", "Project Visualization", "Motion Graphics / AI", "Personal Projects".
+2. Project Grid Layout:
+   - 3-column layout using `st.columns(3)`.
+   - Styled project cards showing thumbnail image, project title, and category badge.
+   - A "View Project Details" button on each card.
+3. Project Detail View Template (Triggered when clicking a project):
+   - Title, Year, and Role badges (e.g., Computer Vision, AI Engineer, Data Scientist, ML Engineer).
+   - Icons/Badges for Software Used (Python, TensorFlow, PyTorch, OpenCV, FAISS).
+   - Content Sections:
+     a) Project Overview.
+     b) Concept & Reference (Mood boards / Architecture diagrams).
+     c) Work in Progress (WIP) / Implementation Showcase.
+   - Back button to return to the full project grid.
+
+Ensure state management using `st.session_state` so switching views is smooth without refreshing unnecessarily.
+
+_______________________________________
+
+Act as a Frontend Developer.
+
+Task:
+Build three core sections in Streamlit:
+
+1. CERTIFICATE GALLERY SECTION:
+   - 3x3 Grid displaying 9+ certificates in responsive HTML/CSS image cards.
+   - Lightbox effect or zoom-on-hover effect for viewing credential details clearly.
+
+2. ABOUT PAGE SECTION:
+   - 2-Column layout:
+     - Column 1: Profile Photo display with styled borders.
+     - Column 2: Bio & background story, software proficiency bars/tags, development process overview, and "Currently Learning/Exploring" tags.
+     - "Available For:" badges (Remote / Freelance / Full-time / Collaborations).
+
+3. CONTACT & FOOTER SECTION:
+   - Direct inquiry email section.
+   - Social link buttons styled with icons (LinkedIn, GitHub, WhatsApp, Discord).
+   - Commission/Availability status indicator (e.g., 🟢 Open for Opportunities).
+   - Styled "Download Resume" PDF button using `st.download_button`.
+
+Return clear, modular Python code ready to append to the Streamlit project.
+
+___________________________________________________
+
+Act as an AI Engineer specializing in RAG systems, LangChain, FAISS, and Groq API.
+
+Task:
+Build an embedded interactive Chatbot widget in Streamlit that answers visitor questions about my portfolio using a FAISS vector index and Groq's `llama-3.1-8b-instant` (or similar fast model).
+
+Requirements:
+1. Vector Indexing:
+   - Automatically parse the `PORTFOLIO_DATA` dictionary or local text file on app startup.
+   - Use `sentence-transformers/all-MiniLM-L6-v2` (or HuggingFace embeddings) to index text chunks into a FAISS vector store.
+2. Retried Context Querying:
+   - Fetch top matching contexts from FAISS based on visitor query.
+3. Chat Interface:
+   - Use `st.chat_input` and `st.chat_message` for a native chat drawer/expandable section.
+4. Strict System Guardrail Prompt:
+   - System instruction: "You are the AI assistant for [YOUR NAME]'s portfolio. Answer questions concisely using ONLY the retrieved context. If the query is off-topic or unrelated to [YOUR NAME]'s experience, skills, projects, or education, politely respond: 'I am specialized to answer questions regarding [YOUR NAME]'s portfolio, experience, and projects. Please feel free to ask about their work!'"
+5. Error Handling:
+   - Gracefully handle missing Groq API key (`st.secrets["GROQ_API_KEY"]`) with a friendly warning prompt.
+
+Provide the complete, fully functional Python code for `setup_rag_chatbot()` and `render_chatbot_ui()`.
+
+_________________________________________
+
+
