@@ -1,0 +1,63 @@
+think like a prompt engineer
+write me a proper prompt to built a portfolio resume website using HTML, CSS, python streamlit for deployment, groq API for chatbot relevent to my portfolio resume, and FAISS and any other tool needed to build the app
+
+write comment section where i should paste my experience, project, education, summary, skills, and any other section needed,
+
+web app should have multiple section such as
+a section with my title and summary 
+a section with my education
+a section with my experience
+a section with my project
+a section that show 9+ certificates in picture format
+a section with my contact info
+a section with a chatbot answering relevant to my portfolio
+
+1. do not give me one prompt which builds the whole app, break the prompt into proper pieces so AI do not hallucinate,
+2. HERO SECTION
+- Full-screen 3D render or animation loop
+- Name and title overlay
+- "Explore Work" CTA
+- Dark theme to make renders pop
+
+3. WORK CATEGORIES
+- All Work
+- Environment Art
+- Project Visualization
+- Motion Graphics
+- Personal Projects
+
+4. PROJECT GRID
+Each item:
+- Project title
+- Category
+- Click to open project
+
+5. PROJECT PAGE TEMPLATE
+Layout:
+- Project title and year
+- Software used (icons: Python, TensorFlow, pytorch, etc.)
+- Role: Computer vision, AI engineer, Data Scientist, ML Engineer
+
+6. Content sections:
+- Project overview
+- Concept/Reference (mood boards)
+- Work in progress shots
+
+7. ABOUT PAGE
+- My photo 
+- Bio and background
+- Software proficiency
+- Process overview
+- Currently learning/exploring
+- Available for: Remote / Freelance / Full-time / Collaborations
+
+8. CONTACT
+- Email for inquiries
+- Social links (LinkedIn, GitHub, WhatsApp number)
+- Discord for community
+- Commission status
+- Resume download button
+
+Design: Dark theme works best for 3D work. Allow renders to load in high quality. Consider WebGL interactive elements for homepage.
+
+tell me how can I train my chatbot with info needed complete step by step guide and make sure that my chat bot reply politely when given question or prompt is not related to my portfolio resume
